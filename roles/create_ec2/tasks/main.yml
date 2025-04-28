@@ -22,12 +22,6 @@
       delete_on_termination: true
     image_id: "{{ ami_image_id }}"
     user_data: "{{ lookup('file', 'user_data.sh') }}"
-    volumes: 
-      - device_name: /dev/sda
-        ebs: 
-          volume_size: 8
-          volume_type: gp2
-          delete_on_termination: true
   tags:
     - ec2_create
 
