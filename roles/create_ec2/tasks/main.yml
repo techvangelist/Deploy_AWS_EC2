@@ -4,6 +4,7 @@
   amazon.aws.ec2_key:
     name: "{{ user_name }}"
     key_material: "{{ lookup('file', 'aws_id_rsa.pub') }}"
+    region: "{{ aws_region }}"
   tags:
     - ec2_create
     - ec2_keypair
